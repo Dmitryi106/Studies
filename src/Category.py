@@ -10,3 +10,5 @@ class Category:
         self.name = name
         self.description = description
         self.products = product
+        Category.total_category =+ 1
+        Category.total_products =+ len(self.products)
