@@ -10,6 +10,12 @@ class Product:
         self.price = price
         self.quantity = quantity
 
+
     @classmethod
     def create_product(cls, name, description, price, quantity):
+        """Добавления продукта в список продуктов"""
         return cls(name, description, price, quantity)
+
+
+
+

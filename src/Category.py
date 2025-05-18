@@ -1,3 +1,4 @@
+from main import product_name
 class Category:
     name: str # Имя
     description: str # Описание
@@ -9,7 +10,7 @@ class Category:
     def __init__(self, name, description, product):
         self.name = name
         self.description = description
-        self.__products = list(product)
+        self.__products = list(product) # приватный атрибут для хранения товаров
         Category.total_products += len(product)
         Category.total_category += 1
 
@@ -19,11 +20,15 @@ class Category:
         Category.total_products += 1
 
     def get_products(self):
-        """Возвращает список продуктов"""
-        printing = []
+        """Метод для вывода продукта. Его цена и количество"""
         for i in self.__products:
-            printing.append(f"{i[0]}, {i[2]} руб. Остаток {i[3]} шт")
-        return printing
+            print(f"{i['name']}, {i['price']} руб. Остаток: {i['quantity']} шт.")
+
+    def get_walk_through_list(self,product_name):
+        """Метод проходит по скиску для изменения цены"""
+        for product in self.__products:
+            if product["name"] == product_name:
+                return 'Продукт найден'
 
 
 
