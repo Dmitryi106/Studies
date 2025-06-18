@@ -8,6 +8,7 @@ for i in categ:
 
 product_name = input("Введите имя продукта в котором хотите поменять цену\n")
 
-Category.get_walk_through_list(product_name)
-
-
+for i in categ:
+    if i.get_walk_through_list(product_name) == 'Продукт найден':
+        print(i.get_walk_through_list(product_name))
+        break

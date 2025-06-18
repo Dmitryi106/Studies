@@ -1,4 +1,3 @@
-from main import product_name
 class Category:
     name: str # Имя
     description: str # Описание
@@ -23,6 +22,7 @@ class Category:
         """Метод для вывода продукта. Его цена и количество"""
         for i in self.__products:
             print(f"{i['name']}, {i['price']} руб. Остаток: {i['quantity']} шт.")
+
 
     def get_walk_through_list(self,product_name):
         """Метод проходит по скиску для изменения цены"""
